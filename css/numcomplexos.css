@@ -104,3 +104,25 @@ h3{
     align-items: center;
     margin: 0px 10px 2px 0px;
 }
+
+@media (max-width: 480px){
+    .content, fieldset{
+        max-width: 85vw;
+        overflow: hidden;
+        min-height: 40vh;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    h2{
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    label, input{
+        font-size: 1em;
+        max-width: 75vw;
+    }
+}
