@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 
-<html lang = "pt-br">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <head>
-        <meta charset = "UTF-8">
-        <title>Conversão de Números Complexos</title>
-        <style>
-        </style>
-        <link href = "css/numcomplexos.css" rel = "stylesheet"/>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversão de Números Complexos</title>
+    <link href="css/numcomplexos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <fieldset>
-        <div class = "content">
-        <h1>Calculadora de Números Complexos </h1>
-        <h2>Polar | Retangular</h2>
+  <body>
+    <fieldset>
+      <div class="content">
+        <h1>Calculadora de Números Complexos</h1>
+        <h2 class="subTitulo">Polar | Retangular</h2>
 
         <p>
-            <label for = "realMod">Digite o número real ou módulo:</label><br>
-            <input type = "text" onkeypress = "return SomenteNumero(event)" id = "realMod" size = "10">
+          <label for="realMod">Digite o número real ou módulo:</label><br />
+          <input
+            type="text"
+            onkeypress="return SomenteNumero(event)"
+            id="realMod"
+            size="10"
+          />
         </p>
 
         <p>
-            <label for = "imagAng">Digite o número imaginário ou ângulo:</label><br>
-            <input type = "text"  onkeypress = "return SomenteNumero(event)" id = "imagAng" size = "10">
+          <label for="imagAng">Digite o número imaginário ou ângulo:</label
+          ><br />
+          <input
+            type="text"
+            onkeypress="return SomenteNumero(event)"
+            id="imagAng"
+            size="10"
+          />
         </p>
-    
-    
-        <h3>Qual forma gostaria de obter?</h3>
-        <div>
-            <input type = "radio" onclick = "DesativaRadio()" id = "retangular">Retangular
+
+        <h3 class="pergunta">Qual forma gostaria de obter?</h3>
+        <div class="radioInputs">
+          <label class="radioLabel">
+            <input class="radioInput" type="radio" id="retangular" />Retangular
+          </label>
+          <label class="radioLabel">
+            <input type="radio" id="polar" class="radioInput" />Polar
+          </label>
         </div>
-        <div>
-            <input type = "radio" onclick = "DesativaRadio()" id = "polar">Polar
-        </div>
 
         <p>
-            <button onclick = "Converte()">Converter</button>
-            <button onclick = "Limpar()">Limpar</button>
+          <button onclick="Converte()">Converter</button>
+          <button onclick="Limpar()">Limpar</button>
         </p>
+        <div class="Resultados">
+          <label id="FormaPolar"></label>
+          <label id="FormaRetangular"></label>
+        </div>
 
-        <label id = "FormaPolar"></label>
-        <label id = "FormaRetangular"></label>
-
-        <p><a href = "ajuda.html" target = "_blank">Precisa de ajuda</a>?</p>
+        <p><a href="ajuda.html" target="_blank">Precisa de ajuda</a>?</p>
 
         <script src="Script.js"></script>
-        </div>
-        </fieldset>   
-    </body>
+      </div>
+    </fieldset>
+  </body>
 </html>
